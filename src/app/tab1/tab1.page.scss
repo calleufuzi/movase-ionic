@@ -2,3 +2,67 @@
   max-height: 35vh;
   overflow: hidden;
 }
+.input-wrapper{
+  padding:20px 30px
+}
+
+.header{
+  display: flex;
+  width: 100%;
+  position: relative;
+  img{
+    width: 100%;
+  }
+}
+
+.footer{
+  display: flex;
+  width: 100%;
+  position: relative;
+  img{
+    width: 100%;
+  }
+}
+
+.title{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  height: 120px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+}
+
+.forget{
+  width: 100%;
+  padding:10px 20px;
+  justify-content: flex-end;
+  font-size: 12px;
+  text-align: right;
+  display: flex;
+  margin-top: 5px;
+}
+.loginButton{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  button{
+    background: #f5b12e;
+    border-radius: 20px;
+    color:#333;
+    padding: 10px 30px;
+    margin: 15px;
+    font-size: 16px;
+  }
+}
