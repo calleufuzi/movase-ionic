@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import {ZXingScannerComponent} from '@zxing/ngx-scanner';
+
 
 
 @Component({
@@ -9,9 +11,23 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 })
 export class Tab2Page {
 
+
+  @ViewChild('scanner')
+  scanner: ZXingScannerComponent;
+
+  hasCameras = false;
+  hasPermission: boolean;
+  qrResultString: string;
+
+  availableDevices: MediaDeviceInfo[];
+  selectedDevice: MediaDeviceInfo;
+
   constructor(
     private barcodeScanner: BarcodeScanner
-  ) {}
+  ) {
+    console.log(this.scanner);
+    
+  }
 
   scanQrCode(){
     if (navigator.mediaDevices && typeof navigator.mediaDevices.getUserMedia === 'function') {

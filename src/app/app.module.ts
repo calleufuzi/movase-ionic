@@ -9,13 +9,15 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+
 
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ZXingScannerModule],
   providers: [
     StatusBar,
     SplashScreen,
