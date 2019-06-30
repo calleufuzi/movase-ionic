@@ -1,9 +1,53 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- <ion-header>
 
-<ion-content></ion-content>
+</ion-header> -->
+<header>
+    <div class="header">
+        <img src="assets/imgs/fundo-cima.png" alt="">
+        <div class="user-info">
+            <ion-avatar>
+                <img src="assets/imgs/img-usuaria.png">
+            </ion-avatar>
+            <p>Angélica</p>
+        </div>
+      </div>
+</header>
+
+<ion-content>
+
+  <div class="actual-points">
+    <p>
+        Pontuação atual
+    </p>
+  </div>
+  <div class="earned-miles">
+      <img class="user-img" src="assets/imgs/bonequinho.png" alt="Usuário">
+      <ion-progress-bar value="0.25" buffer="0.5" color="warning"></ion-progress-bar>
+      <img class="coin-img" src="assets/imgs/coin-b.png" alt="Moedas">
+  </div>
+  <div class="miles-text">
+      <p>Esta no Caminho!</p>
+  </div>
+
+  <ion-item-divider>
+    <p>Continue utilizando o transporte público para aumentar seu ranque e suas milhas!</p>
+    <p>*Quanto mais viagem mais bonus</p>
+  </ion-item-divider>
+    
+  <ion-fab vertical="end" horizontal="end" edge slot="fixed" (click)="scanQrCode()">
+      <ion-fab-button>
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>  
+  <input
+  #camera
+    id='selecao-camera'
+    class="form-control"
+    type="file"
+    capture="camera"
+    name="image"
+    accept="image/*"
+    (change)="loadCamera($event)">
+
+
+</ion-content>

@@ -1,1 +1,103 @@
 
+ion-fab{
+  bottom:20px;
+  right: 20px;
+}
+
+input[type='file'] {
+  display: none
+}
+.header{
+  display: flex;
+  width: 100%;
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .user-info{
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    p{
+      font-weight: bold;
+      font-size: 20px;
+      color: #ffffff;
+      margin-left: 15px;
+    }
+    ion-avatar{
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.actual-points{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+  p{
+    font-size: 16px;
+    font-weight: bold;
+    color: #444444;
+    letter-spacing: 0.8px;
+  }
+}
+.earned-miles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 30px 30px 5px 30px;
+  .user-img{
+    position: absolute;
+    top: 10px;
+    left: 20%;
+    z-index: 2;
+  }
+  ion-progress-bar{
+    --progress-background:#f5b12e;
+    height: 10px;
+  }
+  img{
+    width: 30px;
+    transform: rotate(-15deg)
+  }
+  &:before{
+    content:'';
+    width: 20px;
+    height: 20px;
+    background: #f5b12e;
+    border-radius: 50%;
+    position: absolute;
+    top:35px;
+    left: 25px;
+    z-index: 2;
+  }
+}
+.miles-text{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #888;
+}
+
+ion-item-divider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 90px 40px;
+  p{
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
