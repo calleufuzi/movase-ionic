@@ -34,13 +34,13 @@
     <p>*Quanto mais viagem mais bonus</p>
   </ion-item-divider>
     
-  <ion-fab vertical="end" horizontal="end" edge slot="fixed" (click)="scanQrCode()">
+  <ion-fab vertical="end" horizontal="end" edge slot="fixed" (click)="camera.click()">
       <ion-fab-button>
         <ion-icon name="camera"></ion-icon>
       </ion-fab-button>
   </ion-fab>  
   <input
-  #camera
+    #camera
     id='selecao-camera'
     class="form-control"
     type="file"
@@ -48,6 +48,8 @@
     name="image"
     accept="image/*"
     (change)="loadCamera($event)">
+
+  <div id="ele"></div>
 
 
 </ion-content>

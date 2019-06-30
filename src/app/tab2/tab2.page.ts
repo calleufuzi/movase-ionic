@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -13,6 +14,9 @@ export class Tab2Page {
   ) {}
 
   scanQrCode(){
+    if (navigator.mediaDevices && typeof navigator.mediaDevices.getUserMedia === 'function') {
+      // safely access `navigator.mediaDevices.getUserMedia`
+    }
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
      }).catch(err => {
